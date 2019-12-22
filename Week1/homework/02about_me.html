@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorite food: <span id="fav-food"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+
+
+    <script>
+//     Add a script tag to the bottom of the HTML body.
+// (In the JavaScript) Change the body tag's style so it has a font-family of "Arial, sans-serif".
+// (In the JavaScript) Replace each of the spans (nickname, fav-food, hometown) with your own information.
+// Iterate through each li and change the class to "list-item".
+// (In the HTML head) Add a style tag that sets a rule for .list-item to make the color red.
+// Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+    document.body.style.fontFamily = "Arial, sans-serif";
+
+    document.getElementById('nickname').innerText = 'Bingbing'
+    document.getElementById('fav-food').innerText = 'ramen'
+    document.getElementById('hometown').innerText = 'Dalian'
+
+    let li = document.querySelectorAll('ul li');
+    for (let i of li){
+        i.setAttribute('class', 'list-item') ;
+    }
+
+    let cssSetting = document.createElement('style');
+    document.querySelector("head").appendChild(cssSetting);
+    document.querySelector('style').innerText= '.list-item {color:red}'
+
+    //document.getElementsByClassName('list-item').style.color = "#F0000";(Why it shows: Cannot set property 'color' of undefined
+    // at 02about_me.html:37)
+
+
+
+    let img = document.createElement('img')
+    img.src = 'https://tva1.sinaimg.cn/large/006y8mN6ly1g701xl8uevj30u01541kx.jpg'
+    img.style.width = '200px';
+    document.body.appendChild(img);
+
+
+
+
+    
+    </script>
+
+  </body>
+</html>
