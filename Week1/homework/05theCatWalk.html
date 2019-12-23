@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+  </head>
+  <body>
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif" />
+
+
+
+    <script>
+//AAAAAAAAAAAA! I got stuck for 3 days wondering what's wrong about my code that my cat doesn't move,
+// and it turned out that I shouldn't have put ()after the function in setInterval().
+//I stayed up for TWO WHOLE NIGHT!!!! OMG My time just went wasted like that!!!!
+
+
+
+        const img = document.querySelector('img');
+        const walkingCat = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+        const dancingCat = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif?itemid=10561424'
+
+        let totalWidth = window.screen.width;
+        let mid = (totalWidth - 296)/2; 
+        let position = 0;
+        let auto
+
+        function catWalk(){
+            auto = setInterval(walk, 50);
+            }
+//AAAAAAAAAAAA! I got stuck for 3 days wondering what's wrong about my code that my cat doesn't move,
+// and it turned out that I shouldn't have put ()after the function in setInterval().
+//I stayed up for TWO WHOLE NIGHT!!!! OMG My time just went wasted like that!!!!
+
+        function walk(){
+             if (position >= totalWidth - 296){
+                position = 0;}
+
+             else if (position > mid - 5 && position < mid + 5){
+                  img.src = dancingCat;
+
+                  //setTimeout('img.src = walkingCat; position+= 10', 3000);
+    
+                  setTimeout(stop, 300);
+                  
+//here when the time is longer, the git wouldn't move properly, why's that?
+                  function stop(){
+                    img.src = walkingCat;  
+                    position += 10; 
+                    img.style.left = position + 'px'
+                  }
+                }
+//         _____________DON'T KNOW WHY THE DANCING CAT IMG ISN'T MOVING LIKE A GIF after mid position? 
+
+              else{
+                 position += 10;
+                img.style.left = position + 'px';
+              }
+             
+           }
+        catWalk()
+    
+    </script>
+  </body>
+</html>
