@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.orangeBox{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height:800px;
+    background-color: #ffa500;
+    
+    
+
+}
+
+.innerBox{
+    box-sizing: border-box;
+    width: 75%;
+    height: 300px;
+    background-color: white;
+    margin: 95px 150px 4px;
+    padding: 40px 50px 30px;
+    
+}
+
+.upperBox{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 140px;
+    margin-top:10px;
+    
+}
+
+.quote{
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-content: flex-start;
+    
+
+
+
+}
+
+#colon{
+    font-size: 100px;
+    color: #ffa500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+#quoteContent{
+    font-size: 35px;
+    color: #ffa500;
+    padding-top: 15px;
+    padding-left: 2px;
+    font-family: cursive;
+    letter-spacing: -0.8px ;
+
+}
+
+#author{
+    padding-top: 15px;
+    color: #ffa500;
+    text-align: end;
+    font-family: cursive;
+    font-size: 25px;
+}
+
+.lowerQBox{
+
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+
+.socialMedia{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+i.fab{
+    color: #ffa500;
+    background-color: white;
+    font-size: 45px;
+    cursor: pointer;
+
+/* How to make the icon stretch longer? the height didn't work.
+*/
+}
+
+
+
+
+.buttonBox{
+ 
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+#button{
+    width: 140px;
+    height: 45px;
+    color: white;
+    background-color: #ffa500;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.rectangular{
+  
+    width: 30%;
+    height: 50px;
+    background-color: white;
+
+}
