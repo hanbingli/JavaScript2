@@ -1,8 +1,8 @@
 'use strict';
 
 function doubleEvenNumbers(numbers) {
-    let evenNumbers = numbers.filter(numbers=> numbers%2 === 0)
-    console.log(evenNumbers)
+    const evenNumbers = numbers.filter(numbers=> numbers%2 === 0)
+
     let double = numbers.map(evenNumbers => evenNumbers * 2)
     return double;
   }

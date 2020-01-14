@@ -22,8 +22,8 @@ const mondayTasks = [
 let hourlyRate = 25;
 
 function dayRate(task){
-    let duration = task.map(task =>task.duration);
-    let totalHour = duration.reduce((total, num) => total+num, 0)/60;
+    const duration = task.map(task =>task.duration);
+    const totalHour = duration.reduce((total, num) => total+num, 0)/60;
     let totalPay = totalHour * hourlyRate;
     totalPay = totalPay.toFixed(2)
     let payInEuro = '€' + totalPay
@@ -32,5 +32,5 @@ function dayRate(task){
 }
 
 
-dayRate(mondayTasks)
+
 console.log(dayRate(mondayTasks))

@@ -5,24 +5,23 @@
 
 
 
-let down = document.body.querySelector('#down');
-let up = document.body.querySelector('#up')
-let length = document.body.querySelector('#length').innerText;
+const down = document.body.querySelector('#down');
+const up = document.body.querySelector('#up')
+const session = document.body.querySelector('.session')
+const length = document.body.querySelector('#length').innerText;
 let lengthNum = parseFloat(length);
-console.log(lengthNum);
-console.log(typeof lengthNum);
 
 
-let minutes = document.body.querySelector('#minutes');
-let seconds = document.body.querySelector('#seconds');
+const minutes = document.body.querySelector('#minutes');
+const seconds = document.body.querySelector('#seconds');
 
 
 seconds.innerText = "00";
 minutes.innerText = lengthNum;
 
 
-let play = document.body.querySelector('#play');
-let pause = document.body.querySelector('#pause');
+const play = document.body.querySelector('#play');
+const pause = document.body.querySelector('#pause');
 
 
 down.addEventListener('click',function(){
@@ -54,7 +53,12 @@ up.addEventListener('click',function(){
 let countdown;
 let flag = 0;
 
+
 function timer(){
+    up.style.display = 'none';
+    down.style.display = 'none';
+    session.style.justifyContent = 'center';
+  
     if (flag == 0){
         let now = Date.now();
         let then = now + lengthNum * 60 * 1000;
@@ -102,53 +106,15 @@ function timer(){
 
 
 function pauseTimer(){
+    up.style.display = 'block';
+    down.style.display = 'block';
     clearInterval(countdown);
     flag = 1;
 }
 
 
-//play.onclick(timer(lengthNum));
-
-///Why the addEventListener isn't running?????????
 
 play.addEventListener('click',  timer);
 pause.addEventListener('click',  pauseTimer);
 
 
-
-
-
-
-
-
-
-
-// function countDown(){
-//     if(sec === 0 && min === 0){
-//         alert('Time\'s up!')
-//     }
-    
-//     else if (sec === 0){
-//         sec = 59;
-//         min = min - 1;
-//         minutes.innerText = min;
-//         seconds.innerText = sec;
-//     }
-    
-//     else if (sec < 10){ 
-//         seconds.innerText = '0'+ sec;
-//         minutes.innerText = min;
-//         sec = sec - 1;
-//     }
-//     else{
-//         sec = sec - 1;
-//         minutes.innerText = min;
-//         seconds.innerText = sec;
-       
-//     }
-// }
-
-
-
-// play.addEventListener('click', timer);
-// stop.addEventListener('click', stopTimer);

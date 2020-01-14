@@ -10,11 +10,11 @@ const hackYourFutureMembers = [
 
 
 function combinedAge(members){
-    let ageArray = members.map(i => i.age);
+    const ageArray = members.map(i => i.age);
     console.log(ageArray);
-    let totalAge = ageArray.reduce((total, num) => total + num, 0);
-    let phrase ='The collective age of the HYF team is: ' + totalAge
-    console.log(phrase);
+    const totalAge = ageArray.reduce((total, num) => total + num, 0);
+    const phrase ='The collective age of the HYF team is: ' + totalAge
+
     return  phrase
 }
 

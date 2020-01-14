@@ -8,5 +8,5 @@ function lemonOff(fruits){
    
 
 }
-lemonOff(fruitBasket)
+
 console.log(lemonOff(fruitBasket))
