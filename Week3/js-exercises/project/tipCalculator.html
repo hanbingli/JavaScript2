@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tipCalculator.css">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="tipCalculator.css"> -->
+</head>
+<body>
+    <div class="showbox">
+        <h2 id = "title">TIP CALCULATOR</h2>
+        <div class="qbox">
+            <div class="Q1">
+                <p>How much was your bill?</p>
+                <div class="input1">
+                    <p>$ </p>
+                    <input type="text" id="price" >
+                </div>
+            </div>
+
+            <div class="Q2">
+                <p>How was your service?</p>
+
+                <select id="form" >      
+                        <option value="0.3">30% - Outstanding</option>  
+                        <option value="0.2">20% - Good</option>      
+                        <option value="0.15">15% - It was OK</option>      
+                        <option value="0.1">10% - Bad</option>   
+                        <option value="0.05">5% - Terrible</option>  
+                </select>
+            </div>
+            <div class="Q3">
+                <p>How many people are sharing the bill?</p>
+                <div class="input3">
+                        <input type="text" id="people" >
+                        <p> people</p>
+                    </div>
+            </div>
+
+        </div>
+        
+        <div class="bottonbox">
+            <button id="calculate">CALCULATE!</button>
+        </div>
+
+        <div class="result">
+            <h1>TIP AMOUNT</h1>
+            <div class="amountbox">
+                <p>$</p>
+                <p id="amount">0.00</p>
+            </div>
+            <h3 id="each">each</h3>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="tipCalculator.js"></script>
+</body>
+</html>
